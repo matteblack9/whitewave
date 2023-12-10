@@ -18,7 +18,7 @@ class WhiteWaveApplication
     fun captureFrame(videoPath: String, outputPath: String, frameTime: String) {
         try {
             val processBuilder = ProcessBuilder(
-                    "ffmpeg",
+                    "/opt/homebrew/bin/ffmpeg",
                     "-i", videoPath,
                     "-ss", frameTime,
                     "-vframes", "1",
@@ -31,6 +31,8 @@ class WhiteWaveApplication
             inputStream.bufferedReader().use {
                 it.lines().forEach { line -> println(line) }
             }
+
+            println("DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
             val exitCode = process.waitFor()
             if (exitCode != 0) {
@@ -48,7 +50,7 @@ class WhiteWaveApplication
 //    val frameTime = "00:00:10" // Capture frame at 10 seconds
 //
 //    captureFrame(videoUrl, outputPath, frameTime)
-
+//
 //    val host = "http://localhost:11434/"
 //    val ollamaAPI = OllamaAPI(host)
 //

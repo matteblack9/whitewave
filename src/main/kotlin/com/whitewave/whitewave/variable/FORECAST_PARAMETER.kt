@@ -18,16 +18,16 @@ class FORECAST_PARAMETER
         var SWELL2_PERIOD : String = "swell2_period-surface"
 
         var WAVES_HEIGHT_UNIT : String = "m"
-        var WAVES_DIRECTION_UNIT : String = "deg"
+        var WAVES_DIRECTION_UNIT : String = "°"
         var WAVES_PERIOD_UNIT : String = "s"
         var WWAVES_HEGIHT_UNIT : String = "m"
-        var WWAVES_DIRECTION_UNIT : String = "deg"
+        var WWAVES_DIRECTION_UNIT : String = "°"
         var WWAVES_PERIOD_UNIT : String = "s"
         var SWELL1_HEIGHT_UNIT : String = "m"
-        var SWELL1_DIRECTION_UNIT : String = "deg"
+        var SWELL1_DIRECTION_UNIT : String = "°"
         var SWELL1_PERIOD_UNIT : String = "s"
         var SWELL2_HEIGHT_UNIT : String = "m"
-        var SWELL2_DIRECTION_UNIT : String = "deg"
+        var SWELL2_DIRECTION_UNIT : String = "°"
         var SWELL2_PERIOD_UNIT : String = "s"
     }
 }
