@@ -14,14 +14,41 @@ class SpotStatus (
     @EmbeddedId
     var spotStatusId: SpotStatusId,
 
-    @Column(name = "waves")
-    var waves: Double,
+    @Column(name = "waves_direction")
+    var waves_direction: Double,
 
-    @Column(name = "swell1")
-    var swell1: Double,
+    @Column(name = "waves_period")
+    var waves_period: Double,
 
-    @Column(name = "swell2")
-    var swell2: Double,
+    @Column(name = "waves_height")
+    var waves_height: Double,
+
+    @Column(name = "wind_waves_direction")
+    var wind_waves_direction: Double,
+
+    @Column(name = "wind_waves_period")
+    var wind_waves_period: Double,
+
+    @Column(name = "wind_waves_height")
+    var wind_waves_height: Double,
+
+    @Column(name = "swell1_direction")
+    var swell1_direction: Double,
+
+    @Column(name = "swell1_period")
+    var swell1_period: Double,
+
+    @Column(name = "swell1_height")
+    var swell1_height: Double,
+
+    @Column(name = "swell2_direction")
+    var swell2_direction: Double,
+
+    @Column(name = "swell2_period")
+    var swell2_period: Double,
+
+    @Column(name = "swell2_height")
+    var swell2_height: Double,
 
     @Column(name = "so2sm")
     var so2sm: Double,
@@ -36,5 +63,5 @@ class SpotStatusId (
         var spotName: String,
 
         @Column(name = "time_stamp")
-        var timeStamp: String
+        var timeStamp: Date
 ) : Serializable

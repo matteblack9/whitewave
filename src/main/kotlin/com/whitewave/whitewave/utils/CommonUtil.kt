@@ -11,13 +11,18 @@ import java.util.*
 
 class CommonUtil {}
 
-fun convertPosixTimeToCurrentTime(posixTime: String): String {
-    return convertPosixTimeToCurrentTime(posixTime.toLong())
-}
-
-fun convertPosixTimeToCurrentTime(posixTime: Long): String {
-    val date = Date(posixTime) // Date 객체 생성
-    val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-    val formattedDate = dateFormat.format(date)
-    return formattedDate
-}
+//fun convertDateToString(date: Date) : String {
+//    val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+//    val formattedDate = dateFormat.format(date)
+//    return formattedDate
+//}
+//fun convertPosixTimeToCurrentTime(posixTime: String): Date {
+//    return convertPosixTimeToCurrentTime(posixTime.toLong())
+//}
+//
+//fun convertPosixTimeToCurrentTime(posixTime: Long): String {
+//    val date = Date(posixTime) // Date 객체 생성
+//    val dateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+//    val formattedDate = dateFormat.format(date)
+//    return formattedDate
+//}
