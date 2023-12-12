@@ -1,0 +1,43 @@
+server:
+  port: 8010
+windy:
+  point:
+    api.key: WINDY_POINT_API_KEY
+    api.url: https://api.windy.com/api/point-forecast/v2
+  map:
+    api.key: WINDY_MAP_API_KEY
+
+
+# postgres db setting
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: YOUR_DB_NAME
+    password: YOUR_DB_PASSWORD
+    show-sql: true
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate.use_sql_comments: true
+      hibernate.format_sql: true
+      hibernate.show_sql: true
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    defer-datasource-initialization: true
+
+  #openAI
+openai:
+  token: YOUR_OPENAI_TOKEN
+
+---
+spring:
+  profiles:
+    active: local
+---
+spring:
+  profiles:
+    active: develop
+---
+spring:
+  profiles:
+    active: prod
