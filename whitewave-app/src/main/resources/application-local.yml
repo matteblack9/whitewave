@@ -1,0 +1,25 @@
+springdoc:
+  swagger-ui:
+    path:/swagger-ui.html
+
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+    show-sql: true
+  jpa:
+    properties:
+#      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      database-platform: org.hibernate.dialect.H2Dialect
+      hibernate.use_sql_comments: true
+      hibernate.format_sql: true
+      hibernate.show_sql: true
+    hibernate.ddl-auto: create
+    generate-ddl: true
+    defer-datasource-initialization: true
+
